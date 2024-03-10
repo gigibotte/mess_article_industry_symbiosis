@@ -1,0 +1,299 @@
+locations:
+# X1-start
+    X1:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 12
+            battery:
+                constraints:
+                    storage_cap_equals: 2.7
+            district_heating:
+                constraints:
+                    energy_cap_equals: 2.5
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 1, y: 1}
+    # X1-end
+    X2:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 11.4
+            battery:
+                constraints:
+                    storage_cap_equals: 6.
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 5.2
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3, y: 5}
+    X3:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 6.4
+            battery:
+                constraints:
+                    storage_cap_equals: 1.9
+            boiler:
+                constraints:
+                    energy_cap_equals: 2.2
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3, y: 8}
+    X4:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 7.1
+            battery:
+                constraints:
+                    storage_cap_equals: 2.5
+            boiler:
+                constraints:
+                    energy_cap_equals: 3.9
+            district_heating:
+                constraints:
+                    energy_cap_equals: 4.6
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 2, y: 5}
+    X5:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 2.6
+            battery:
+                constraints:
+                    storage_cap_equals: 3.2
+            boiler:
+                constraints:
+                    energy_cap_equals: 1.1
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 8.7
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3, y: 6}
+    X6:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 11.4
+            battery:
+                constraints:
+                    storage_cap_equals: 8.2
+            boiler:
+                constraints:
+                    energy_cap_equals: 1.7
+            chp:
+                constraints:
+                    energy_cap_equals: 3.6
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3, y: 69}
+
+    X7:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 5.8
+            district_heating:
+                constraints:
+                    energy_cap_equals: 9.6
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 5.5
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3, y: 88}
+    X8:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 4.4
+            district_heating:
+                constraints:
+                    energy_cap_equals: 3.1
+            boiler:
+                constraints:
+                    energy_cap_equals: 7.8
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 1,y: 0}
+    X9:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 1.6
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 6.3
+            heat_pump:
+                constraints:
+                    energy_cap_equals: 9.2
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 2,y: 0}
+    X10:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 7.2
+            battery:
+                constraints:
+                    storage_cap_equals: 4.0
+            chp:
+                constraints:
+                    energy_cap_equals: 1.9
+            district_heating:
+                constraints:
+                    energy_cap_equals: 2.3
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3,y: 0}
+    X11:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 7.5
+            battery:
+                constraints:
+                    storage_cap_equals: 3.1
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 4.8
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 4,y: 0}
+    X12:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 4.4
+            boiler:
+                constraints:
+                    energy_cap_equals: 2.5
+            heat_pump:
+                constraints:
+                    energy_cap_equals: 6.1
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 4.7
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 5,y: 0}
+    X13:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 8.2
+            battery:
+                constraints:
+                    storage_cap_equals: 2.1
+            chp:
+                constraints:
+                    energy_cap_equals: 5.5
+            district_heating:
+                constraints:
+                    energy_cap_equals: 2.8
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 6,y: 0}
+    X14:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 8.5
+            battery:
+                constraints:
+                    storage_cap_equals: 15.
+            heat_pump:
+                constraints:
+                    energy_cap_equals: 1.2
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 7.4
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 7,y: 0}
+    X15:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 2.3
+            district_heating:
+                constraints:
+                    energy_cap_equals: 11.0
+            chp:
+                constraints:
+                    energy_cap_equals: 1.5
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 8,y: 0}
+links:
+    # links-start
+
+    # links-end

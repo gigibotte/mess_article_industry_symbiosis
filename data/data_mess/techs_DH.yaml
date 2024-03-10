@@ -1,0 +1,166 @@
+##
+# TECHNOLOGY DEFINITIONS
+##
+
+# Note: '-start' and '-end' is used in tutorial documentation only
+
+# supply_power_plus-start
+tech_groups:
+
+# supply_power_plus-end
+
+techs:
+
+##-GRID SUPPLY-##
+    # supply-start
+    supply_grid_power:
+        essentials:
+            name: 'National grid import'
+            color: '#C5ABE3'
+            parent: supply_grid
+            carrier_out: electricity
+        constraints:
+            resource: inf
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 15
+                om_con: "file=power_prices.csv" # 10p/kWh electricity price #ppt
+        priority: 5
+
+    supply_gas:
+        essentials:
+            name: 'Natural gas import'
+            color: '#C98AAD'
+            parent: supply_grid
+            carrier_out: gas
+        constraints:
+            resource: inf
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 1
+                om_con: 0.025 # 2.5p/kWh gas price #ppt
+        priority: 5
+
+    district_heating_industry:
+        essentials:
+            name: 'District Heating Industry'
+            color: '#D55E00'
+            parent: supply
+            carrier_out: heat
+        constraints:
+            energy_eff: 0.98
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 7
+                om_con: "file=hourly_gas_prices.csv" #A2A
+        priority: 4
+    # supply-end
+
+##-Renewables-##
+    # pv-start
+    pv:
+        essentials:
+            name: 'Solar photovoltaic power'
+            color: '#F9D956'
+            parent: supply
+            carrier_out: electricity
+        constraints:
+            resource: "file=pv_resource.csv"
+            resource_unit: energy_per_cap
+            energy_eff: 0.85
+            force_resource: true
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 1350
+                om_con: 0.
+        priority: 1
+    # pv-end
+
+# Conversion
+    # boiler-start
+    boiler:
+        essentials:
+            name: 'Natural gas boiler'
+            color: '#8E2999'
+            parent: conversion
+            carrier_out: heat
+            carrier_in: gas
+        constraints:
+            energy_eff: 0.85
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                om_con: 0.004  # .4p/kWh
+        priority: 6
+    # boiler-end
+    # heatpump-start
+    heat_pump:
+        essentials:
+            name: "Heat Pump"
+            color: "#56B4E9"
+            parent: conversion
+            carrier_in: electricity
+            carrier_out: heat
+        constraints: 
+            COP: 3.5
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                om_con: 0.004
+                om_prod: "file=power_prices.csv"
+        priority: 6
+    #heatpump_end   
+
+##-STORAGE-##
+    # storage-start
+    battery:
+        essentials:
+            name: 'battery'
+            color: '#FF5733'
+            parent: storage
+            carrier: electricity
+        constraints:
+            lifetime: 10
+            energy_eff: 0.9        # [-]
+            storage_cap_min: 0.2   # [-]
+            storage_cap_max: 0.9   # [-]
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 250
+                om_prod: 2.13
+        priority: 2
+    # storage-end
+
+
+##-DEMAND-##
+    # demand-start
+    demand_electricity:
+        essentials:
+            name: 'Electrical demand'
+            color: '#072486'
+            parent: demand
+            carrier: electricity
+        priority: 0
+
+    demand_heat:
+        essentials:
+            name: 'Heat demand'
+            color: '#660507'
+            parent: demand
+            carrier: heat
+        priority: 0
+    # demand-end
+
+
+

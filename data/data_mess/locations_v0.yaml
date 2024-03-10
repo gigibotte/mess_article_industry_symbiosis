@@ -1,0 +1,62 @@
+locations:
+# X1-start
+    X1:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 12
+            battery:
+                constraints:
+                    storage_cap_equals: 2.7
+            district_heating:
+                constraints:
+                    energy_cap_equals: 2.5
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 1, y: 1}
+    # X1-end
+    X2:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 11.4
+            battery:
+                constraints:
+                    storage_cap_equals: 6.
+            district_heating_industry:
+                constraints:
+                    energy_cap_equals: 5.2
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3, y: 5}
+    X3:
+        techs:
+            pv:
+                constraints:
+                    energy_cap_equals: 6.4
+            battery:
+                constraints:
+                    storage_cap_equals: 1.9
+            boiler:
+                constraints:
+                    energy_cap_equals: 2.2
+            supply_gas: 
+            supply_grid_power: 
+            demand_electricity:
+                constraints.resource: file=demand_power.csv
+            demand_heat:
+                constraints.resource: file=demand_heat.csv
+        coordinates: {x: 3, y: 8}
+
+links:
+    # links-start
+
+    # links-end

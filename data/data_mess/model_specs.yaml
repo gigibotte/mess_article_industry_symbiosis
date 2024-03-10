@@ -1,0 +1,12 @@
+##
+# MODEL SPECIFICATIONS DEFINITIONS
+##
+model:
+        name: "urban example"
+        temporal_interval: hours
+        timespan: 8760
+        timestep: 1.
+        network_electricity: true 
+        network_district_heating: true
+        network_type: "pure balance"
+        industry: "yes"
